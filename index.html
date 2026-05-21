@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorador Cognitivo - Modelo IA</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest"></script>
+</head>
+<body>
+  <header>
+    <h1>🧠 Explorador Cognitivo</h1>
+    <p>Interfaz para probar modelos de Teachable Machine</p>
+  </header>
+
+  <main>
+    <button onclick="init()">Iniciar cámara</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+  </main>
+
+  <footer>
+    <p>Diseñado para estudiantes de psicología</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
