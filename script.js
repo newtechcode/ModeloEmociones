@@ -10,18 +10,24 @@ async function init() {
 
     const flip = true;
     webcam = new tmImage.Webcam(300, 300, flip);
-    await webcam.setup(); 
+    await webcam.setup();
     await webcam.play();
+
     window.requestAnimationFrame(loop);
 
-    document.getElementById('webcam').srcObject = webcam.webcam;
+    
+    const videoContainer = document.querySelector(".video-container");
+    videoContainer.innerHTML = "";
+    videoContainer.appendChild(webcam.canvas);
 
     labelContainer = document.getElementById('label-container');
     labelContainer.innerHTML = '';
+
     for (let i = 0; i < maxPredictions; i++) {
         labelContainer.appendChild(document.createElement('div'));
     }
 }
+
 
 async function loop() {
     webcam.update();
