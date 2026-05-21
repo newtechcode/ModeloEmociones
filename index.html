@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visor de Modelo - Psicología</title>
+  <title>Explorador de Emociones IA</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🧠 Explorador Cognitivo</h1>
-    <p>Prueba tu modelo de Teachable Machine</p>
+  <header>
+    <h1>🧠 Explorador de Modelos de IA</h1>
+    <p>Interacción con tu modelo de Teachable Machine</p>
+  </header>
 
-    <button onclick="init()">Iniciar Cámara</button>
-
-    <div class="video-container">
+  <main>
+    <section class="camera-section">
       <video id="webcam" autoplay playsinline></video>
-    </div>
+    </section>
 
-    <div id="label-container"></div>
-  </div>
+    <section class="controls">
+      <button onclick="init()">Iniciar Cámara</button>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-<script src="script.js"></script>
+    <section id="label-container" class="results"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest"></script>
+  <script src="script.js"></script>
 </body>
 </html>
