@@ -1,36 +1,41 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
   text-align: center;
-  margin: 0;
-}
-
-header {
   padding: 20px;
 }
 
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 button {
-  background: #ff9a9e;
+  background: #6c63ff;
+  color: white;
   border: none;
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
 }
 
-#webcam-container {
+button:hover {
+  background: #5548d9;
+}
+
+.video-container {
   margin-top: 20px;
 }
 
-#label-container div {
-  margin: 5px;
-  padding: 5px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 5px;
+video {
+  border-radius: 12px;
+  width: 300px;
 }
 
-footer {
-  margin-top: 40px;
-  padding: 10px;
+#label-container {
+  margin-top: 20px;
+  font-size: 18px;
 }
