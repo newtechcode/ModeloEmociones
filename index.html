@@ -3,29 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explorador de Emociones IA</title>
+  <title>Explorador Cognitivo</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>🧠 Explorador de Modelos de IA</h1>
-    <p>Interacción con tu modelo de Teachable Machine</p>
-  </header>
+  <div class="container">
+    <h1>🧠 Explorador Cognitivo</h1>
+    <p>Prueba tu modelo de Teachable Machine</p>
 
-  <main>
-    <section class="camera-section">
+    <button id="startBtn">Iniciar Cámara</button>
+
+    <div class="video-container">
       <video id="webcam" autoplay playsinline></video>
-    </section>
+    </div>
 
-    <section class="controls">
-      <button onclick="init()">Iniciar Cámara</button>
-    </section>
+    <div id="label-container"></div>
+  </div>
 
-    <section id="label-container" class="results"></section>
-  </main>
+  <!-- Librerías correctas (IMPORTANTE no modificar esto) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest"></script>
+  <!-- Tu script -->
   <script src="script.js"></script>
+
+  <script>
+    // Conectar botón con la función
+    document.getElementById("startBtn").addEventListener("click", () => {
+      if (typeof init === "function") {
+        init();
+      } else {
+        alert("Error: no se encontró la función init(). Revisa script.js");
+      }
+    });
+  </script>
+
 </body>
 </html>
